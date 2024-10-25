@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* Very light green background */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #2e7d32; /* Darker green for contrast */
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the boxes */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px; /* Increased gap for more space between boxes */
+}
+
+.city-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(33.33% - 20px); /* Fixed width for equal sizing */
+    max-width: 350px; /* Maximum width to prevent boxes from becoming too wide */
+    margin-bottom: 20px;
+}
+
+.city-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #1b5e20; /* Dark green for city names */
+    border-bottom: 2px solid #c8e6c9; /* Light green border */
+    padding-bottom: 10px;
+}
+
+.weather-info {
+    margin-bottom: 10px;
+}
+
+.weather-info span:first-child {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    color: #388e3c; /* Medium green for labels */
+}
+
+@media (max-width: 1024px) {
+    .city-box {
+        width: calc(50% - 15px); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .city-box {
+        width: 100%; /* Full width on small screens */
+        max-width: 400px; /* Slightly wider on small screens */
+    }
+}
+
+.city-box.alert {
+    background-color: #ffcccb; /* Light red background for alert */
+}
+
+.alert-message {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
+}
